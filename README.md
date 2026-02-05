@@ -1,7 +1,7 @@
 # tt-rgbw-pmod
 An overkill PMOD to powerfully handle powerful coloured LEDs for the tt08-rgbw-controller ASIC
 
-[![tt-rgbw-pmod board](./images/tt-rgbw-pmod-3d.png)](./images/tt-rgbw-pmod.png "The tt-rgbw-pmod)
+![tt-rgbw-pmod board](./images/tt-rgbw-pmod-3d.png "The RGBW PMOD board")
 
 ## Overview
 
