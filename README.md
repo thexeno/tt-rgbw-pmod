@@ -4,11 +4,15 @@ This PMOD matches with the [TinyTapeout/tt-demo-pcb](https://github.com/TinyTape
 
 ![tt-rgbw-pmod board](./images/tt-rgbw-pmod-3d.png "The RGBW PMOD board")
 
+[![IMAGE ALT TEXT HERE](./images/pmod_demo_snap.png)](https://youtu.be/X-74kIeId4A) 
+
 ## Overview
 
 This PMOD board provides high-power LED driver capabilities for the tt08-rgbw-controller ASIC, featuring four independent channels for RGBW LED control with both digital PWM and analog dimming modes.
 
 ## Pinout
+
+### PWM inputs (inputs PMOD side, outputs ASIC side)
 
 | Pmod    | TinyTapeout | Function        | Note                  |
 |---------|-------------|-----------------|-----------------------|
@@ -16,10 +20,28 @@ This PMOD board provides high-power LED driver capabilities for the tt08-rgbw-co
 | OUTPUT2 | uo[1]       | Green PWM input | Input impedance 100 kΩ|
 | OUTPUT3 | uo[2]       | Blue PWM input  | Input impedance 100 kΩ|
 | OUTPUT4 | uo[3]       | White PWM input | Input impedance 100 kΩ|
-| PIN5    | -           | Not connected   |                       |
-| PIN6    | -           | Not connected   |                       |
-| PIN7    | -           | Not connected   |                       |
-| PIN8    | -           | Not connected   |                       |
+| OUTPUT5 - 8   | uo[4:7]           | Not connected   |                       |
+
+### Inputs ASIC side
+
+All "INPUT" pins are disconnected on the PMOD, not used. But the ASIC and the Demoboard are using them for the SPI communication, so signals are present if probed. See ASIC documentation.
+
+
+### Colorwheel Debug Port
+
+This applies only if enabled, see ASIC documentation.
+
+| Pmod    | TinyTapeout | Function        | Note                  |
+|---------|-------------|-----------------|-----------------------|
+| BIDIR1 | uio_out[0]       | CwPU register bit 0   |  |
+| BIDIR2 | uio_out[1]       | CwPU register bit 1 | |
+| BIDIR3 | uio_out[2]       | CwPU register bit 2  | |
+| BIDIR4 | uio_out[3]       | CwPU register bit 3 | |
+| BIDIR5    | uio_out[4]           | CwPU register bit 4   |                       |
+| BIDIR6    | uio_out[5]           | CwPU register bit 5   |                       |
+| BIDIR7    | uio_out[6]           | CwPU register bit 6   |                       |
+| BIDIR8    | uio_out[7]           | CwPU register bit 7   |                       |
+
 
 ## Getting Started
 
@@ -62,6 +84,13 @@ Current calculation:
 - For continuous operation at default settings (150 mA per channel), a small heatsink is recommended:
   - Base size: 7×7 mm
   - Thermal resistance: 30–40 °C/W
+ 
+## Debugging Features
+
+Breakout to CwPU protocol 8-bit interface. Comply with the ![CwPU debug register probe, whole packet structure](./full_transaction.png "CwPU periodi register prober") debug interface.
+
+
+
 
 ## Electrical Characteristics
 
@@ -69,14 +98,14 @@ Current calculation:
 |-----------------------------------------------|-----|-----|-----|------|----------------------------|
 | External supply voltage                        | 6   | 12  | 20  | V    | Required (J4 or J5)        |
 | External supply current                        | -   | -   | 400 | mA  | 2W total max               |
+| PMOD Logic VDD                        | 3.0   | -   | 5.0 | V  | To handle correctly analog or digital dimming detection               |
 | Logic input voltage                            | -   | 3.3 | -   | V    | TTL compatible             |
 | LED current (Digital mode)                     | -   | 75  | -   | mA   | Per channel, default       |
 | LED current (Analog mode)                      | -   | 150 | -   | mA   | Per channel, default       |
-| PWM frequency PMOD pin, Digital mode           | -   | -   | 1   | kHz  | Maximum recommended        |
-| PWM frequency PMOD pin, Analog mode            | 10  | 50  | -   | kHz  | Minimum / recommended      |
+| PWM input for Digital mode           | -   | -   | 1   | kHz  | Maximum recommended        |
+| PWM input for Analog mode            | 10  | 50  | -   | kHz  | Minimum / recommended      |
+| V<sub>IL</sub>                                     | -  | 0.8  | - | V  | LVTTL     |
+| V<sub>IH</sub>                                       | -  | 2.0  | - | V  | LVTTL     |
 
-TODO: Verify reliable TTL level driving at 3.3V input
 
-## License
-todo
 
