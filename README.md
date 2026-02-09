@@ -9,17 +9,21 @@ This PMOD matches with the [TinyTapeout/tt-demo-pcb](https://github.com/TinyTape
 This PMOD board provides high-power LED driver capabilities for the tt08-rgbw-controller ASIC, featuring four independent channels for RGBW LED control with both digital PWM and analog dimming modes.
 
 ## Pinout
-### PWM inputs
+
+### PWM inputs (inputs PMOD side, outputs ASIC side)
+
 | Pmod    | TinyTapeout | Function        | Note                  |
 |---------|-------------|-----------------|-----------------------|
 | OUTPUT1 | uo[0]       | Red PWM input   | Input impedance 100 kΩ|
 | OUTPUT2 | uo[1]       | Green PWM input | Input impedance 100 kΩ|
 | OUTPUT3 | uo[2]       | Blue PWM input  | Input impedance 100 kΩ|
 | OUTPUT4 | uo[3]       | White PWM input | Input impedance 100 kΩ|
-| OUTPUT5    | uo[4]           | Not connected   |                       |
-| OUTPUT6    | uo[5]           | Not connected   |                       |
-| OUTPUT7    | uo[6]           | Not connected   |                       |
-| OUTPUT8    | uo[7]           | Not connected   |                       |
+| OUTPUT5 - 8   | uo[4:7]           | Not connected   |                       |
+
+### Inputs ASIC side
+
+All "INPUT" pins are disconnected on the PMOD, not used. But the ASIC and the Demoboard are using them for the SPI communication, so signals are present if probed. See ASIC documentation.
+
 
 ### Colorwheel Debug Port
 
