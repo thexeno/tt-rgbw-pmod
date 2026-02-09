@@ -107,6 +107,3 @@ Breakout to CwPU protocol 8-bit interface. Comply with the ![CwPU debug register
 
 
 
-## License
-todo
-
