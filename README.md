@@ -23,6 +23,7 @@ This PMOD board provides high-power LED driver capabilities for the tt08-rgbw-co
 
 ### Colorwheel Debug Port
 
+This applies only if enabled, see ASIC documentation.
 
 | Pmod    | TinyTapeout | Function        | Note                  |
 |---------|-------------|-----------------|-----------------------|
