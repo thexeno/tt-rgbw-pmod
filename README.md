@@ -4,8 +4,9 @@ This PMOD matches with the [TinyTapeout/tt-demo-pcb](https://github.com/TinyTape
 
 ![tt-rgbw-pmod board](./images/tt-rgbw-pmod-3d.png "The RGBW PMOD board")
 
-[![IMAGE ALT TEXT HERE](./images/pmod_demo_snap.png)](https://youtu.be/X-74kIeId4A) 
+[![Video preview](./images/working_board.png)]([https://www.youtube.com/watch?v=VIDEO_ID](https://www.youtube.com/watch?v=X-74kIeId4A))
 
+https://www.youtube.com/watch?v=X-74kIeId4A
 ## Overview
 
 This PMOD board provides high-power LED driver capabilities for the tt08-rgbw-controller ASIC, featuring four independent channels for RGBW LED control with both digital PWM and analog dimming modes.
