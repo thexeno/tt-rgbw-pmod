@@ -1,10 +1,19 @@
 # tt-rgbw-pmod
 An overkill PMOD to handle an RGBW LED for experimenting with the color rendering of the [thexeno/tt08-rgbw-controller](https://github.com/thexeno/tt08-rgbw-controller/ "tt08-rgbw-controller") ASIC. 
-This PMOD matches with the [TinyTapeout/tt-demo-pcb](https://github.com/TinyTapeout/tt-demo-pcb "tt-demo-pcb").
+This PMOD matches with the [TinyTapeout/tt-demo-pcb](https://github.com/TinyTapeout/tt-demo-pcb "tt-demo-pcb"). These links are referred to as the "ASIC documentation".
 
 ![tt-rgbw-pmod board](./images/tt-rgbw-pmod-3d.png "The RGBW PMOD board")
 
-[![IMAGE ALT TEXT HERE](./images/pmod_demo_snap.png)](https://youtu.be/X-74kIeId4A) 
+### <p align="center"> PREVIEW: https://www.youtube.com/watch?v=X-74kIeId4A </p>
+
+  <div align="center">
+  <img src="./images/working_board.png" width="640">
+  <img src="./images/working_board_duck.png" width="640">
+  <br>
+  </div>
+
+
+
 
 ## Overview
 
@@ -87,7 +96,7 @@ Current calculation:
  
 ## Debugging Features
 
-Breakout to CwPU protocol 8-bit interface. Comply with the ![CwPU debug register probe, whole packet structure](./full_transaction.png "CwPU periodi register prober") debug interface.
+Breakout to CwPU protocol 8-bit interface for internal registers probing. This is active only if enabled. See ASIC documentation.
 
 
 
