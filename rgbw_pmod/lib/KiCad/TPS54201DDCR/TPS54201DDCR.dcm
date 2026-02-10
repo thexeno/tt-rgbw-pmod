@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TPS54201DDCR
+D 4.5V-to-28V Input Voltage, Synchronous Buck LED Driver
+K
+F http://www.ti.com/lit/gpn/TPS54201
+$ENDCMP
+#
+#End Doc Library
