@@ -4,9 +4,15 @@ This PMOD matches with the [TinyTapeout/tt-demo-pcb](https://github.com/TinyTape
 
 ![tt-rgbw-pmod board](./images/tt-rgbw-pmod-3d.png "The RGBW PMOD board")
 
-<p align="center"> PREVIEW: https://www.youtube.com/watch?v=X-74kIeId4A </p>
+### <p align="center"> PREVIEW: https://www.youtube.com/watch?v=X-74kIeId4A </p>
 
-![Video preview](./images/working_board.png)   ![Video preview](./images/working_board_duck.png)
+  <div align="center">
+  <img src="./images/working_board.png" width="640">
+  <img src="./images/working_board_duck.png" width="640">
+  <br>
+  </div>
+
+
 
 
 ## Overview
